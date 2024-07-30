@@ -1,5 +1,6 @@
 package com.proiect.practica.medapp.patient;
 
+import com.proiect.practica.medapp.doctors.Doctors;
 import jakarta.persistence.*;
 import lombok.Data;
 import io.swagger.annotations.ApiModelProperty;
@@ -38,7 +39,7 @@ public class Patient {
             joinColumns = @JoinColumn(name = "patient_id"), // Coloana pentru ID-ul pacientului
             inverseJoinColumns = @JoinColumn(name = "doctor_id") // Coloana pentru ID-ul medicului
     )
-    private Set<Doctors> doctors;
+   Set<Doctors> doctors;
 
 
 }
